@@ -28,13 +28,14 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
 #include "log.h"
 #include "util.h"
 
-#include "init_msm.h"
+#include "init_msm8974.h"
 
 void cdma_properties(char const *default_cdma_sub,
         char const *operator_numeric, char const *operator_alpha)
@@ -48,28 +49,18 @@ void cdma_properties(char const *default_cdma_sub,
     property_set("telephony.lteOnCdmaDevice", "1");
 }
 
-void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
+void init_target_properties()
 {
-    char platform[PROP_VALUE_MAX];
-    char bootloader[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char devicename[PROP_VALUE_MAX];
-    int rc;
-
-    UNUSED(msm_id);
-    UNUSED(msm_ver);
-    UNUSED(board_type);
-
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
+    std::string platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
         return;
 
-    property_get("ro.bootloader", bootloader);
+    std::string bootloader = property_get("ro.bootloader");
 
-    if (strstr(bootloader, "G860P")) {
+    if (bootloader.find("G860P") == 0) {
         /* kltespr */
-        property_set("ro.build.fingerprint", "samsung/kltesprsports/kltesprsports:4.4.2/KOT49H/G860PVPU1ANG3:user/release-keys");
-        property_set("ro.build.description", "kltesprsports-user 4.4.2 KOT49H G860PVPU1ANG3 release-keys");
+        property_set("ro.build.fingerprint", "samsung/kltesprsports/kltesprsports:6.0.1/MMB29M/G860PVPU2CPD1:user/release-keys");
+        property_set("ro.build.description", "kltesprsports-user 6.0.1 MMB29M G860PVPU2CPD1 release-keys");
         property_set("ro.product.model", "SM-G860P");
         property_set("ro.product.device", "kltesprsports");
         property_set("telephony.sms.pseudo_multipart", "1");
@@ -77,7 +68,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     }
     /* TODO: Add Sprint MVNOs */
 
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
+    std::string device = property_get("ro.product.device");
+    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
 }
