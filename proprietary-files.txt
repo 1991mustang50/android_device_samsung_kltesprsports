@@ -1,54 +1,51 @@
-# Bluetooth firmware
-vendor/firmware/bcm4350_V0301.0568.hcd
-
-# GPS
-etc/clatd.conf
-etc/gps.conf
-etc/izat.conf
-etc/sap.conf
-lib/hw/gps.default.so
-lib/libgps.utils.so
-lib/libloc_core.so
-lib/libloc_eng.so
-lib/libloc_api_v02.so
-lib/libmdmdetect.so
-lib/libperipheral_client.so
-vendor/lib/hw/flp.default.so
-vendor/lib/libgeofence.so
-vendor/lib/libizat_core.so
-vendor/lib/liblbs_core.so
-
-# NFC
-vendor/firmware/bcm2079xB4_firmware.ncd
-vendor/firmware/bcm2079xB4_pre_firmware.ncd
-vendor/firmware/bcm2079xB5_firmware.ncd
-vendor/firmware/bcm2079xB5_pre_firmware.ncd
-
-# Qualcomm framework
-vendor/lib/libconfigdb.so
-vendor/lib/libdiag.so
-vendor/lib/libdsutils.so
-vendor/lib/libidl.so
-vendor/lib/libqcci_legacy.so
-vendor/lib/libqmi.so
-vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_encdec.so
-vendor/lib/libqmiservices.so
-
-# Radio
-bin/efsks
-bin/ks
-bin/qcks
-bin/qmuxd
-bin/rfs_access
-bin/rild
-bin/rmt_storage
-lib/libreference-ril.so
-lib/libril.so
-lib/libsec-ril.so
-lib/libsecnativefeature.so
-lib/libsecril-client.so
-vendor/lib/libril-qcril-hook-oem.so
+ # GPS
+ etc/clatd.conf
+ etc/gps.conf
+ etc/izat.conf
+ etc/sap.conf
+ lib/hw/gps.default.so
+ lib/libgps.utils.so
+ lib/libloc_core.so
+ lib/libloc_eng.so
+ lib/libloc_api_v02.so
+ vendor/lib/hw/flp.default.so
+ vendor/lib/libflp.so
+ vendor/lib/libgeofence.so
+ vendor/lib/libizat_core.so
+ vendor/lib/liblbs_core.so
+ 
+ # NFC
+ vendor/firmware/bcm2079xB4_firmware.ncd
+ vendor/firmware/bcm2079xB4_pre_firmware.ncd
+ vendor/firmware/bcm2079xB5_firmware.ncd
+ vendor/firmware/bcm2079xB5_pre_firmware.ncd
+ 
+ # Qualcomm framework
+ lib/libmdmdetect.so
+ vendor/lib/libconfigdb.so
+ vendor/lib/libdiag.so
+ vendor/lib/libdsutils.so
+ vendor/lib/libidl.so
+ vendor/lib/libqcci_legacy.so
+ vendor/lib/libqmi.so
+ vendor/lib/libqmi_cci.so
+ vendor/lib/libqmi_client_qmux.so
+ vendor/lib/libqmi_common_so.so
+ vendor/lib/libqmi_csi.so
+ vendor/lib/libqmi_encdec.so
+ vendor/lib/libqmiservices.so
+ 
+ # Radio
+ bin/efsks
+ bin/ks
+ bin/qcks
+ bin/qmuxd
+ bin/rfs_access
+ bin/rild
+ bin/rmt_storage
+ lib/libreference-ril.so
+ lib/libril.so
+ lib/libsec-ril.so
+ lib/libsecnativefeature.so
+ lib/libsecril-client.so
+ vendor/lib/libril-qcril-hook-oem.so
