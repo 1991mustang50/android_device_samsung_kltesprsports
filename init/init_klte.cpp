@@ -53,6 +53,10 @@ void init_target_properties()
 {
     std::string platform = property_get("ro.board.platform");
     if (platform != ANDROID_TARGET)
+<<<<<<< HEAD
+=======
+        return;
+>>>>>>> febf7c504801f6ff6013068c05b8ff1f9deea25c
 
     std::string bootloader = property_get("ro.bootloader");
 
@@ -66,7 +70,13 @@ void init_target_properties()
         cdma_properties("1", "310120", "Sprint");
     }
     /* TODO: Add Sprint MVNOs */
+<<<<<<< HEAD
   std::string device = property_get("ro.product.device");
    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
     
+=======
+
+    std::string device = property_get("ro.product.device");
+    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
+>>>>>>> febf7c504801f6ff6013068c05b8ff1f9deea25c
 }

@@ -1,2 +1,2 @@
-add_lunch_combo cm_kltesprsports-eng
+add_lunch_combo cm_kltesprsports-userdebug
 

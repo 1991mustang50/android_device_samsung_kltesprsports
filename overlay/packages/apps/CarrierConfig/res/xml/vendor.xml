@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 +<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
  +<carrier_config_list>
  +    <carrier_config>
@@ -6,3 +7,13 @@
  +        <boolean name="apn_expand_bool" value="true" />
  +    </carrier_config>
  +</carrier_config_list>
+=======
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <carrier_config>
+        <boolean name="show_cdma_choices_bool" value="true" />
+        <boolean name="show_apn_setting_cdma_bool" value="true" />
+        <boolean name="apn_expand_bool" value="true" />
+    </carrier_config>
+</carrier_config_list>
+>>>>>>> febf7c504801f6ff6013068c05b8ff1f9deea25c
