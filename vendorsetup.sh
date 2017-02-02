@@ -1,2 +1,2 @@
-add_lunch_combo cm_kltesprsports-userdebug
+add_lunch_combo lineage_kltesprsports-userdebug
 
